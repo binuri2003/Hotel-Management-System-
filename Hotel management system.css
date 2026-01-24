@@ -1,0 +1,115 @@
+:root {
+    --teal-dark: #155724;
+    --gold: #FFD700;
+    --white: #ffffff;
+}
+
+/* --- General --- */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* --- Navbar --- */
+.navbar {
+    padding: 15px 0;
+}
+
+.nav-link {
+    color: var(--gold) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--white) !important;
+}
+
+/* --- Buttons --- */
+.btn-gold-solid {
+    background-color: var(--gold);
+    color: var(--teal-dark);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-gold-solid:hover {
+    background-color: var(--white);
+    color: var(--gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Room Category --- */
+/* --- Room Category Headings --- */
+.room-category h3 {
+    color: var(--teal-dark);
+    margin-bottom: 15px;
+    font-size: 2rem;       /* Bigger heading */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* --- Room Images --- */
+.room-img {
+    width: auto;           /* Fill the container width */
+    height: 600px;         /* Fixed height for all images */
+    object-fit: cover;     /* Fill the box without stretching */
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+    display: block;
+}
+
+/* --- Optional: Adjust height on smaller screens --- */
+@media (max-width: 768px) {
+    .room-img {
+        height: 250px;     /* Reduce height on mobile */
+    }
+
+    .room-category h3 {
+        font-size: 1.5rem;
+    }
+}
+.room-category p {
+    font-size: 2rem;       /* Increase font size */
+    font-weight: 600;         /* Make it a bit bolder */
+    color: var(--teal-dark);  /* Match your theme color */
+    margin-top: 10px;
+}
+
+
+
+/* --- Gold Text --- */
+.text-gold {
+    color: var(--gold);
+}
+
+/* --- Reservation Form --- */
+.reservation-form label {
+    font-weight: 500;
+    color: var(--teal-dark);
+}
+
+.reservation-form input, .reservation-form select, .reservation-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.reservation-form textarea {
+    resize: vertical;
+}
+
+/* --- Table for history --- */
+.table thead {
+    background-color: var(--teal-dark);
+    color: var(--gold);
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

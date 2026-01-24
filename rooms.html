@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Grand Hotel</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Hotel management system.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color:#155724;">
+  <div class="container">
+    <a class="navbar-brand text-gold" href="index.html">Grand Hotel</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-gold" href="reservation.html">Reserve Room</a></li>
+        <li class="nav-item"><a class="nav-link text-gold" href="history.html">Reservation History</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+
+  <h2 class="text-center text-gold mb-4">Our Rooms & Facilities</h2>
+
+  <!-- AC Rooms -->
+  <div class="room-category mb-5">
+    <h3 class="text-teal-dark">AC Rooms</h3>
+    <div id="acCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="images/acbedroom.jpeg" class="d-block w-100 room-img" alt="Bed Room"></div>
+        <div class="carousel-item"><img src="images/aclivingroom.jpeg" class="d-block w-100 room-img" alt="Living Area"></div>
+        <div class="carousel-item"><img src="images/acwashroom.jpeg" class="d-block w-100 room-img" alt="Washroom"></div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#acCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#acCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <p class="mt-2">Price: $120/night </p>
+  </div>
+
+  <!-- Non-AC Rooms -->
+  <div class="room-category mb-5">
+    <h3 class="text-teal-dark">Non-AC Rooms</h3>
+    <div id="nonacCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="images/nonacbedroom.jpeg" class="d-block w-100 room-img" alt="Bed Room"></div>
+        <div class="carousel-item"><img src="images/nonaclivingroom.jpeg" class="d-block w-100 room-img" alt="Living Area"></div>
+        <div class="carousel-item"><img src="images/nonacwashroom.jpeg" class="d-block w-100 room-img" alt="Washroom"></div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#nonacCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#nonacCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <p class="mt-2">Price: $80/night </p>
+  </div>
+
+  <!-- Sea View Rooms -->
+  <div class="room-category mb-5">
+    <h3 class="text-teal-dark">Sea View Rooms</h3>
+    <div id="seaCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="images/seaviewbedroom.jpeg" class="d-block w-100 room-img" alt="Bed Room"></div>
+        <div class="carousel-item"><img src="images/seaviewbalcony.jpeg" class="d-block w-100 room-img" alt="Balcony"></div>
+        <div class="carousel-item"><img src="images/seaviewwashroom.jpeg" class="d-block w-100 room-img" alt="Washroom"></div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#seaCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#seaCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <p class="mt-2">Price: $150/night </p>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Hotel management system.js"></script>
+</body>
+</html>

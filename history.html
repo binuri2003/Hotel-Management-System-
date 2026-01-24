@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation History - Grand Hotel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Hotel management system.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg" style="background-color:#155724;">
+  <div class="container">
+    <a class="navbar-brand text-gold" href="index.html">Grand Hotel</a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link text-gold" href="rooms.html">View Rooms</a></li>
+      <li class="nav-item"><a class="nav-link text-gold" href="reservation.html">Reserve Room</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container my-5">
+    <h2 class="text-center text-gold mb-4">Your Reservation History</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Reservation ID</th>
+                <th>Room ID</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Special Requests</th>
+            </tr>
+        </thead>
+        <tbody id="historyTableBody">
+            <!-- Data will be loaded dynamically -->
+        </tbody>
+    </table>
+</div>
+
+<script src="Hotel management system.js"></script>
+</body>
+</html>
