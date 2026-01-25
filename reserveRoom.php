@@ -1,22 +1,18 @@
 <?php
-// SHOW ERRORS
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// DATABASE CONNECTION
 $conn = mysqli_connect("localhost", "root", "", "hotel_management_system");
 if (!$conn) {
     die("❌ Database connection failed: " . mysqli_connect_error());
 }
 
-// GET FORM DATA
 $customerID = mysqli_real_escape_string($conn, $_POST['customerID']);
 $roomID     = mysqli_real_escape_string($conn, $_POST['roomID']);
 $checkIn    = mysqli_real_escape_string($conn, $_POST['checkIn']);
 $checkOut   = mysqli_real_escape_string($conn, $_POST['checkOut']);
 $specialReq = mysqli_real_escape_string($conn, $_POST['specialReq']);
 
-// CHECK ROOM EXISTS AND AVAILABILITY
 $checkRoomSQL = "SELECT * FROM room WHERE RoomID = '$roomID'";
 $result = mysqli_query($conn, $checkRoomSQL);
 
@@ -34,7 +30,6 @@ if ($room['Status'] === 'reserved') {
     die("❌ Room is already reserved.");
 }
 
-// INSERT RESERVATION
 $insertReservationSQL = "
 INSERT INTO reserve (RoomID, CheckInDate, CheckOutDate, Customer_UserID, special_request)
 VALUES ('$roomID', '$checkIn', '$checkOut', '$customerID', '$specialReq')
@@ -44,7 +39,6 @@ if (!mysqli_query($conn, $insertReservationSQL)) {
     die("❌ Reservation failed: " . mysqli_error($conn));
 }
 
-// UPDATE ROOM STATUS
 $updateRoomSQL = "UPDATE room SET Status = 'reserved', Customer_UserID = '$customerID' WHERE RoomID = '$roomID'";
 if (!mysqli_query($conn, $updateRoomSQL)) {
     die("❌ Room status update failed: " . mysqli_error($conn));

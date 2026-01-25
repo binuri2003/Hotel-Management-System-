@@ -23,6 +23,12 @@
 <div class="container my-5">
     <h2 class="text-center text-gold mb-4">Your Reservation History</h2>
 
+    <div class="mb-4">
+        <label for="customerIDInput" class="form-label text-teal-dark">Enter Your Customer ID:</label>
+        <input type="number" id="customerIDInput" class="form-control" placeholder="Customer ID">
+        <button class="btn btn-gold-solid mt-2" onclick="loadReservationHistory()">Load History</button>
+    </div>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -34,7 +40,7 @@
             </tr>
         </thead>
         <tbody id="historyTableBody">
-            <!-- Data will be loaded dynamically -->
+            
         </tbody>
     </table>
 </div>

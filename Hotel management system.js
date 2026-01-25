@@ -1,13 +1,7 @@
-// JS file for all pages
-
-// ---------------- EXISTING CODE (UNCHANGED) ----------------
-
-// Generate random Reservation ID
 function generateReservationID() {
     return 'RES' + Math.floor(Math.random() * 100000);
 }
 
-// Reservation form validation
 function validateReservationForm() {
     const customerID = document.getElementById('customerID').value;
     const roomID = document.getElementById('roomID').value;
@@ -23,16 +17,17 @@ function validateReservationForm() {
     return true;
 }
 
-// ---------------- NEW CODE (FOR HISTORY PAGE ONLY) ----------------
-
-// Load reservation history from backend (MySQL)
 function loadReservationHistory() {
     const tableBody = document.getElementById("historyTableBody");
+    if (!tableBody) return; 
 
-    // Only run on history page
-    if (!tableBody) return;
+    const customerID = document.getElementById("customerIDInput").value.trim();
+    if (!customerID) {
+        alert("Please enter your Customer ID.");
+        return;
+    }
 
-    fetch("getReservationHistory.php") // PHP file to fetch data from SQL
+    fetch(`getReservationHistory.php?customerID=${customerID}`)
         .then(response => response.json())
         .then(data => {
             tableBody.innerHTML = "";
@@ -40,7 +35,7 @@ function loadReservationHistory() {
             if (!data || data.length === 0) {
                 tableBody.innerHTML = `
                     <tr>
-                        <td colspan="5" class="text-center">No reservations found</td>
+                        <td colspan="5" class="text-center">No reservations found for Customer ID ${customerID}</td>
                     </tr>
                 `;
                 return;
@@ -49,10 +44,10 @@ function loadReservationHistory() {
             data.forEach(res => {
                 const row = `
                     <tr>
-                        <td>${res.reservation_id}</td>
-                        <td>${res.room_type}</td>
-                        <td>${res.check_in}</td>
-                        <td>${res.check_out}</td>
+                        <td>${res.ReservationID}</td>
+                        <td>${res.RoomID}</td>
+                        <td>${res.CheckInDate}</td>
+                        <td>${res.CheckOutDate}</td>
                         <td>${res.special_request || 'None'}</td>
                     </tr>
                 `;
@@ -71,5 +66,7 @@ function loadReservationHistory() {
         });
 }
 
-// Run when page loads
-document.addEventListener("DOMContentLoaded", loadReservationHistory);
+document.addEventListener("DOMContentLoaded", () => {
+    const customerIDInput = document.getElementById("customerIDInput");
+    if (customerIDInput && customerIDInput.value) loadReservationHistory();
+});

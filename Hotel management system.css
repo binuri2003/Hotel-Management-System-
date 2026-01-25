@@ -4,14 +4,12 @@
     --white: #ffffff;
 }
 
-/* --- General --- */
 body {
     font-family: 'Lato', sans-serif;
     background-color: #f5f5f5;
     color: #333;
 }
 
-/* --- Navbar --- */
 .navbar {
     padding: 15px 0;
 }
@@ -25,7 +23,6 @@ body {
     color: var(--white) !important;
 }
 
-/* --- Buttons --- */
 .btn-gold-solid {
     background-color: var(--gold);
     color: var(--teal-dark);
@@ -42,30 +39,27 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* --- Room Category --- */
-/* --- Room Category Headings --- */
+
 .room-category h3 {
     color: var(--teal-dark);
     margin-bottom: 15px;
-    font-size: 2rem;       /* Bigger heading */
+    font-size: 2rem;       
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-/* --- Room Images --- */
 .room-img {
-    width: auto;           /* Fill the container width */
-    height: 600px;         /* Fixed height for all images */
-    object-fit: cover;     /* Fill the box without stretching */
+    width: auto;          
+    height: 600px;         
+    object-fit: cover;     
     border: 2px solid var(--gold);
     border-radius: 5px;
     display: block;
 }
 
-/* --- Optional: Adjust height on smaller screens --- */
 @media (max-width: 768px) {
     .room-img {
-        height: 250px;     /* Reduce height on mobile */
+        height: 250px;     
     }
 
     .room-category h3 {
@@ -73,20 +67,16 @@ body {
     }
 }
 .room-category p {
-    font-size: 2rem;       /* Increase font size */
-    font-weight: 600;         /* Make it a bit bolder */
-    color: var(--teal-dark);  /* Match your theme color */
+    font-size: 2rem;       
+    font-weight: 600;         
+    color: var(--teal-dark);  
     margin-top: 10px;
 }
 
-
-
-/* --- Gold Text --- */
 .text-gold {
     color: var(--gold);
 }
 
-/* --- Reservation Form --- */
 .reservation-form label {
     font-weight: 500;
     color: var(--teal-dark);
@@ -104,7 +94,6 @@ body {
     resize: vertical;
 }
 
-/* --- Table for history --- */
 .table thead {
     background-color: var(--teal-dark);
     color: var(--gold);
