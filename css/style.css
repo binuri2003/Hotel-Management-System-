@@ -1,0 +1,130 @@
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e6f5c, #2e8b74);
+}
+
+/* ---------- PAGE CONTAINER ---------- */
+.page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+/* ---------- TITLE ---------- */
+.welcome-text {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffdd57;
+    margin-bottom: 35px;
+}
+
+/* ---------- SECTION CARD ---------- */
+.section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* ---------- HEADINGS ---------- */
+.section h2,
+.section h3 {
+    text-align: center;
+    color: #1e6f5c;
+    margin-top: 0;
+}
+
+/* ---------- FORM LAYOUT ---------- */
+.form-container form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.form-container label {
+    font-weight: bold;
+    color: #1e6f5c;
+}
+
+.form-container input {
+    padding: 8px;
+    width: 180px;
+}
+
+/* ---------- BUTTON ---------- */
+button,
+.button {
+    background: linear-gradient(135deg, #f7d046, #f4c430);
+    color: #1e6f5c;
+    border: none;
+    padding: 10px 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: linear-gradient(135deg, #ffe680, #f7d046);
+}
+
+/* ---------- TABLE ---------- */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table-container th {
+    background-color: #1e6f5c;
+    color: white;
+    padding: 10px;
+}
+
+.table-container td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ---------- UPDATE FORM INSIDE TABLE ---------- */
+.table-container form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.table-container input {
+    width: 80px;
+    padding: 6px;
+}
+
+/* ---------- MESSAGE ---------- */
+.message {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #f7d046, #f4c430);
+    color: #1e6f5c;
+    padding: 11px 20px;
+    margin-right: 12px;
+    margin-top: 12px;
+    text-decoration: none;   /* ← THIS LINE FIXES IT */
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #ffe680, #f7d046);
+    text-decoration: none;
+}
