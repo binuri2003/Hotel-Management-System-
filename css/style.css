@@ -128,3 +128,63 @@ button:hover,
     background: linear-gradient(135deg, #ffe680, #f7d046);
     text-decoration: none;
 }
+/* ---------- LOGIN PAGE ---------- */
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e9f5f0, #fdfefe);
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 35px 40px;
+    width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #0b3d2e; /* same green as admin */
+    font-size: 24px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-color: #0b3d2e;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0b3d2e;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #145a44;
+}
+
+.error-msg {
+    color: #c0392b;
+    margin-bottom: 15px;
+    font-size: 14px;
+}

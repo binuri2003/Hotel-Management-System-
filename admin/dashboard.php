@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
+    header("Location: ../backend/login.php");
+    exit();
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +26,8 @@
 
     <div class="section">
         <h2>Users</h2>
-        <a href="manage_users.php" class="button">Manage Users</a>
+        <a href="../backend/view_users.php" class="button">Manage Users</a>
+
     </div>
 
     <div class="section">

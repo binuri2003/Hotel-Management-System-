@@ -1,13 +1,21 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
+    header("Location: ../backend/login.php");
+    exit();
+}
 include "../db/connection.php";
 
 $message = "";
 
 
-if (isset($_GET['reservation_id']) && isset($_GET['room_id'])) {
+if (isset($_POST['cancel_reservation'])) {
 
-    $reservationId = $_GET['reservation_id'];
-    $roomId        = $_GET['room_id'];
+   $reservationId = $_POST['reservation_id'];
+$roomId        = $_POST['room_id'];
+
 
     $deleteReservation = "
         DELETE FROM reserve
