@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0b3d2e; /* Dark teal from logo */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-logo {
+    width: 130px;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #0b3d2e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #d4af37; /* Gold accent */
+    padding-bottom: 10px;
+}
+
+label {
+    font-weight: 600;
+    color: #0b3d2e;
+    margin-top: 15px;
+    display: block;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    background: #f9f9f9;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #d4af37;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: #d4af37; /* Gold from logo */
+    color: #0b3d2e;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #b8962e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+th {
+    background: #0b3d2e;
+    color: #d4af37;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #0b3d2e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d4af37;
+}

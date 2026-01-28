@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Hotel - Payment Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.jpg.jpeg" alt="Grand Hotel Logo" class="form-logo">
+        </div>
+
+        <h2>PAYMENT PORTAL</h2>
+        <hr>
+
+        <form action="payment.php" method="POST">
+            
+            <div class="input-group">
+                <label for="userID">Customer User ID</label>
+                <input type="number" id="userID" name="userID" placeholder="e.g. 101" required>
+            </div>
+
+            <div class="input-group">
+                <label for="roomID">Room ID</label>
+                <input type="number" id="roomID" name="roomID" placeholder="e.g. 205" required>
+            </div>
+
+            <div class="input-group">
+                <label for="orderID">Order ID</label>
+                <input type="number" id="orderID" name="orderID" placeholder="e.g. 5001" required>
+            </div>
+
+            <div class="input-group">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" name="paymentMethod">
+                    <option value="Cash">Cash</option>
+                    <option value="Card">Card</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="finalPrice">Final Price (Rs.)</label>
+                <input type="number" step="0.01" id="finalPrice" name="finalPrice" placeholder="0.00" required>
+            </div>
+
+            <button type="submit" class="process-btn">PROCESS PAYMENT</button>
+        </form>
+        
+        <div class="footer-links">
+            <a href="view_payment.php">Search History</a>
+        </div>
+    </div>
+</body>
+</html>
