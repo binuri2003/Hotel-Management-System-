@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.food-image {
+    background-image: url("https://nomadparadise.com/wp-content/uploads/2021/05/sri-lankan-food-06-1024x683.jpg");
+    background-size: cover;
+    padding: 40px;
+}
+
+.carousel img {
+    height: 400px;
+    object-fit: cover;
+}
