@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supplier Portal - Grand Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <img src="logo.jpg" alt="Grand Hotel Logo" class="form-logo">
+        <h2>Supplier Management</h2>
+    </div>
+
+    <form action="../Backend/supplier_insert.php" method="POST">
+        <div class="section">
+            <h3>Account Details</h3>
+            <label>First Name:</label> <input type="text" name="first_name" required>
+            <label>Last Name:</label> <input type="text" name="last_name" required>
+            <label>Email:</label> <input type="email" name="email" required>
+            <label>Username:</label> <input type="text" name="username" required>
+            <label>Password:</label> <input type="password" name="password" required>
+        </div>
+        <div class="section">
+            <h3>Company Info</h3>
+            <label>Company Name:</label> <input type="text" name="company_name" required>
+            <label>Phone:</label> <input type="text" name="phone" required>
+        </div>
+        <button type="submit">Update Supply Inventory</button>
+    </form>
+        <div id="successModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="success-icon">✔</div>
+        <h2>Supplier Registered</h2>
+        <p>The new supplier has been successfully added to the Grand Hotel directory.</p>
+        <button onclick="closeModal()" class="modal-btn">Continue to Dashboard</button>
+    </div>
+</body>
+</html>
